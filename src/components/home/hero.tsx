@@ -18,7 +18,7 @@ interface ExpItemProps {
 
 const exps: Array<Exp> = [
   {
-    label: 'Students',
+    label: 'Participants',
     value: '1K+',
   },
   {
@@ -51,7 +51,13 @@ const HomeHero: FC = () => {
   return (
     <Box
       id="hero"
-      sx={{ backgroundColor: 'background.paper', borderWidth: 10, position: 'relative', pt: 4, pb: { xs: 8, md: 10 } }}
+      sx={{
+        background: 'linear-gradient(to right, #0000FF, #bf0b6d)',
+        borderWidth: 10,
+        position: 'relative',
+        pt: 4,
+        pb: { xs: 8, md: 10 },
+      }}
     >
       <Container maxWidth="lg">
         <Grid
@@ -86,7 +92,7 @@ const HomeHero: FC = () => {
                     component="mark"
                     sx={{
                       position: 'relative',
-                      color: '#0000FF',
+                      color: '#fff',
                       fontSize: 'inherit',
                       fontWeight: 'inherit',
                       backgroundColor: 'unset',
@@ -111,7 +117,7 @@ const HomeHero: FC = () => {
                     component="span"
                     sx={{
                       fontSize: 'inherit',
-                      color: '#FF1493 	',
+                      color: '#fff 	',
                       fontWeight: 'inherit',
                       position: 'relative',
                       '& svg': {
@@ -145,13 +151,13 @@ const HomeHero: FC = () => {
                   Festival UCP
                 </Typography>
               </Box>
-              <Box sx={{ mb: 4, width: { xs: '100%', md: '70%' } }}>
+              {/* <Box sx={{ mb: 4, width: { xs: '100%', md: '70%' } }}>
                 <Typography sx={{ color: 'text.secondary', lineHeight: 1.6 }}>
                   {
                     "Let's take an online course to improve your skills in a different way, you can set your own study time according to your learning speed. So you san study comfortable and absorb tge material easily."
                   }
                 </Typography>
-              </Box>
+              </Box> */}
               {/* <Box sx={{ '& button': { mr: 2 } }}>
                 <ScrollLink to="popular-course" spy={true} smooth={true} offset={0} duration={350}>
                   <StyledButton color="primary" size="large" variant="contained">
@@ -166,15 +172,15 @@ const HomeHero: FC = () => {
               </Box> */}
             </Box>
           </Grid>
-          <Grid item xs={12} md={5} sx={{ position: 'relative' }}>
+          <Grid item xs={12} md={5} sx={{ position: 'relative', mb: 4 }}>
             <Box sx={{ lineHeight: 0 }}>
-              <Image src="/images/UcpImage.jpg" width={775} height={900} alt="Hero img" />
+              <Image src="/images/image.png" width={900} height={1150} alt="Hero img" />
             </Box>
           </Grid>
         </Grid>
 
         {/* Experience */}
-        <Box sx={{ boxShadow: 2, py: 4, px: 7, borderRadius: 4 }}>
+        <Box sx={{ boxShadow: 2, py: 4, px: 7, borderRadius: 4, backgroundColor: '#fff' }}>
           <Grid container spacing={2}>
             {exps.map((item) => (
               <Grid key={item.value} item xs={12} md={4}>
