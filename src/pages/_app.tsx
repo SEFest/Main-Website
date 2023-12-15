@@ -11,7 +11,7 @@ import '@/styles/globals.css'
 import '@/styles/react-slick.css'
 import { NextPageWithLayout } from '@/interfaces/layout'
 import '../components/countDown/countdown.css'
-import CountdownTimer from '@/components/countDown/CountDown'
+import CountdownTimer from '../components/countDown/CountDown'
 
 // import 'slick-carousel/slick/slick-theme.css'
 
