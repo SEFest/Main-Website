@@ -10,16 +10,16 @@ const DynamicHomePopularCourse = dynamic(() => import('../components/home/popula
 const DynamicHomeTestimonial = dynamic(() => import('../components/home/testimonial'))
 const DynamicHomeOurMentors = dynamic(() => import('../components/home/mentors'))
 const DynamicHomeNewsLetter = dynamic(() => import('../components/home/newsletter'))
-const CountDown = dynamic(() => import('../components/countDown/CountDown'))
+const CountDown = dynamic(() => import('../components/countDown/Countdown'), { ssr: false })
 
 const Home: NextPageWithLayout = () => {
   return (
     <>
       <DynamicHomeHero />
-      <CountDown />
+      <CountDown targetDate={undefined} />
       <DynamicHomePopularCourse />
       <DynamicHomeFeature />
-      <DynamicHomeTestimonial />
+      {/* <DynamicHomeTestimonial /> */}
       <DynamicHomeOurMentors />
       <DynamicHomeNewsLetter />
     </>

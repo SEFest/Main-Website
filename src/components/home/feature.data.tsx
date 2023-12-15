@@ -12,52 +12,52 @@ interface Data {
 
 export const data: Data[] = [
   {
-    title: 'Easy Accessable',
+    title: 'Department Name',
     description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
     icon: <ArtTrackIcon />,
   },
   {
-    title: 'More Affordable Cost',
+    title: 'Department Name',
     description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
     icon: <AttachMoneyIcon />,
   },
   {
-    title: 'Flexible Study Time',
+    title: 'Department Name',
     description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
     icon: <LocalLibraryIcon />,
   },
   {
-    title: 'Consultation With Mentor',
+    title: 'Department Name',
     description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
     icon: <ContactSupportIcon />,
   },
   {
-    title: 'Consultation With Mentor',
+    title: 'Department Name',
     description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
     icon: <ContactSupportIcon />,
   },
   {
-    title: 'Consultation With Mentor',
+    title: 'Department Name',
     description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
     icon: <ContactSupportIcon />,
   },
   {
-    title: 'Consultation With Mentor',
+    title: 'Department Name',
     description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
     icon: <ContactSupportIcon />,
   },
   {
-    title: 'Consultation With Mentor',
+    title: 'Department Name',
     description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
     icon: <ContactSupportIcon />,
   },
   {
-    title: 'Consultation With Mentor',
+    title: 'Department Name',
     description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
     icon: <ContactSupportIcon />,
   },
   {
-    title: 'Consultation With Mentor',
+    title: 'Department Name',
     description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
     icon: <ContactSupportIcon />,
   },

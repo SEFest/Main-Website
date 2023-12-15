@@ -52,7 +52,8 @@ const HomeHero: FC = () => {
     <Box
       id="hero"
       sx={{
-        background: 'linear-gradient(to right, #0000FF, #bf0b6d)',
+        // background: 'linear-gradient(to right, #0000FF, #bf0b6d)',
+        backgroundClip: 'background.paper',
         borderWidth: 10,
         position: 'relative',
         pt: 4,
@@ -92,7 +93,7 @@ const HomeHero: FC = () => {
                     component="mark"
                     sx={{
                       position: 'relative',
-                      color: '#fff',
+                      color: '#0000FF',
                       fontSize: 'inherit',
                       fontWeight: 'inherit',
                       backgroundColor: 'unset',
@@ -117,7 +118,7 @@ const HomeHero: FC = () => {
                     component="span"
                     sx={{
                       fontSize: 'inherit',
-                      color: '#fff 	',
+                      color: '#bf0b6d',
                       fontWeight: 'inherit',
                       position: 'relative',
                       '& svg': {
