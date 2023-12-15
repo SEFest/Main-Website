@@ -3,6 +3,7 @@ import React, { useContext, useEffect } from 'react'
 import { useCountdown } from '../hooks/useCountdown.js'
 import { LaunchContext } from '../context/LaunchTime'
 import { Box, Grid, Typography } from '@mui/material'
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 
 const DateTimeDisplay = ({ value, type, isDanger }) => {
   return (
@@ -12,6 +13,7 @@ const DateTimeDisplay = ({ value, type, isDanger }) => {
     </div>
   )
 }
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 
 const ExpiredNotice = () => {
   return (
@@ -32,6 +34,7 @@ const ExpiredNotice = () => {
     </div>
   )
 }
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 
 const ShowCounter = ({ days, hours, minutes, seconds }) => {
   return (
@@ -48,6 +51,7 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
     </div>
   )
 }
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 
 const CountdownTimer = ({ targetDate }) => {
   const [days, hours, minutes, seconds] = useCountdown('1/24/2024')
