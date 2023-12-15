@@ -52,7 +52,7 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
 }
 
 const CountdownTimer = ({ targetDate }) => {
-  const [days, hours, minutes, seconds] = useCountdown('1/19/2024')
+  const [days, hours, minutes, seconds] = useCountdown('1/24/2024')
   // const launcContext = useContext(LaunchContext)
 
   // const { showRegister, setShowRegister } = launcContext

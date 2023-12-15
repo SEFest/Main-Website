@@ -40,7 +40,7 @@ const HomeFeature: FC = () => {
     <Box id="feature" sx={{ py: { xs: 10, md: 14 }, backgroundColor: 'background.paper' }}>
       <Container>
         <Grid container spacing={3}>
-          <Grid item xs={12} md={5}>
+          {/* <Grid item xs={12} md={5}>
             <Box sx={{ position: 'relative' }}>
               <Image src="/images/home-feature.png" width={650} height={678} quality={97} alt="Feature img" />
               <Box
@@ -139,8 +139,8 @@ const HomeFeature: FC = () => {
                 </Box>
               </Box>
             </Box>
-          </Grid>
-          <Grid item xs={12} md={7}>
+          </Grid> */}
+          <Grid item xs={12} md={15}>
             <Typography
               component="h2"
               sx={{
@@ -190,7 +190,7 @@ const HomeFeature: FC = () => {
               {data.map(({ title, description, icon }, index) => (
                 <Grid key={String(index)} item xs={12} md={6}>
                   <Box sx={{ px: 2, py: 1.5, boxShadow: 1, borderRadius: 4, display: 'flex', alignItems: 'center' }}>
-                    <Box
+                    {/* <Box
                       sx={{
                         mr: 1,
                         backgroundColor: 'primary.main',
@@ -207,7 +207,7 @@ const HomeFeature: FC = () => {
                       }}
                     >
                       {icon}
-                    </Box>
+                    </Box> */}
                     <Box sx={{ display: 'flex', flex: 1, flexDirection: 'column' }}>
                       <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1, color: 'secondary.main' }}>
                         {title}
