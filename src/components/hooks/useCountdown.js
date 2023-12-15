@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 
 const useCountdown = (targetDate) => {
   const countDownDate = new Date(targetDate).getTime()
@@ -14,6 +15,7 @@ const useCountdown = (targetDate) => {
 
   return getReturnValues(countDown)
 }
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 
 const getReturnValues = (countDown) => {
   // calculate time left
