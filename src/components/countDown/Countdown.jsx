@@ -4,7 +4,6 @@ import { useCountdown } from '../hooks/useCountdown.js'
 import { LaunchContext } from '../context/LaunchTime'
 import { Box, Grid, Typography } from '@mui/material'
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-
 const DateTimeDisplay = ({ value, type, isDanger }) => {
   return (
     <div className={isDanger ? 'countdown danger' : 'countdown'}>
@@ -14,7 +13,6 @@ const DateTimeDisplay = ({ value, type, isDanger }) => {
   )
 }
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-
 const ExpiredNotice = () => {
   return (
     <div>
@@ -35,7 +33,6 @@ const ExpiredNotice = () => {
   )
 }
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-
 const ShowCounter = ({ days, hours, minutes, seconds }) => {
   return (
     <div className="show-counter">
@@ -52,7 +49,6 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
   )
 }
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-
 const CountdownTimer = ({ targetDate }) => {
   const [days, hours, minutes, seconds] = useCountdown('1/24/2024')
   // const launcContext = useContext(LaunchContext)

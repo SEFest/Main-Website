@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-
 const useCountdown = (targetDate) => {
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+
   const countDownDate = new Date(targetDate).getTime()
   const [countDown, setCountDown] = useState(countDownDate - new Date().getTime())
 
@@ -16,9 +17,10 @@ const useCountdown = (targetDate) => {
   return getReturnValues(countDown)
 }
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-
 const getReturnValues = (countDown) => {
   // calculate time left
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+
   const days = Math.floor(countDown / (1000 * 60 * 60 * 24))
   const hours = Math.floor((countDown % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
   const minutes = Math.floor((countDown % (1000 * 60 * 60)) / (1000 * 60))
