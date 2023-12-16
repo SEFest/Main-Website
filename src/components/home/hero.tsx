@@ -15,7 +15,7 @@ const HomeHero: FC = () => {
         '--swiper-pagination-color': '#fff',
       }}
       autoplay={{
-        delay: 5000,
+        delay: 3000,
         disableOnInteraction: false,
       }}
       speed={600}
@@ -25,13 +25,35 @@ const HomeHero: FC = () => {
         clickable: true,
       }}
       navigation={true}
-      modules={[Autoplay, Pagination]}
+      modules={[Autoplay, Pagination, Parallax]}
     >
       <SwiperSlide>
         <div slot="container-start" className="parallax-bg" data-swiper-parallax="-70%">
           <Image src={require('../../../public/images/DSC_6642.jpg')} alt="Image" className="picture" />
           <div className="title" data-swiper-parallax="-700">
             Slide 1
+          </div>
+          <div className="subtitle" data-swiper-parallax="-200">
+            Subtitle
+          </div>
+        </div>
+      </SwiperSlide>
+      <SwiperSlide>
+        <div slot="container-start" className="parallax-bg" data-swiper-parallax="-70%">
+          <Image src={require('../../../public/images/DSC_6642.jpg')} alt="Image" className="picture" />
+          <div className="title" data-swiper-parallax="-700">
+            Slide 2
+          </div>
+          <div className="subtitle" data-swiper-parallax="-200">
+            Subtitle
+          </div>
+        </div>
+      </SwiperSlide>
+      <SwiperSlide>
+        <div slot="container-start" className="parallax-bg" data-swiper-parallax="-70%">
+          <Image src={require('../../../public/images/DSC_6642.jpg')} alt="Image" className="picture" />
+          <div className="title" data-swiper-parallax="-700">
+            Slide 3
           </div>
           <div className="subtitle" data-swiper-parallax="-200">
             Subtitle
