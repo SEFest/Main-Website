@@ -40,7 +40,7 @@ const HomeHero: FC = () => {
       </SwiperSlide>
       <SwiperSlide>
         <div slot="container-start" className="parallax-bg" data-swiper-parallax="-70%">
-          <Image src={require('../../../public/images/DSC_6642.jpg')} alt="Image" className="picture" />
+          <Image src={require('../../../public/images/mainImage.jpg')} alt="Image" className="picture" />
           <div className="title" data-swiper-parallax="-700">
             Slide 2
           </div>
