@@ -7,7 +7,11 @@ import Typography from '@mui/material/Typography'
 import { Link as ScrollLink } from 'react-scroll'
 import { StyledButton } from '@/components/styled-button'
 import PlayArrowIcon from '@mui/icons-material/PlayArrow'
-
+import { Parallax, Pagination, Navigation } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
 interface Exp {
   label: string
   value: string
@@ -61,135 +65,96 @@ const HomeHero: FC = () => {
       }}
     >
       <Container maxWidth="lg">
-        <Grid
-          container
-          spacing={0}
-          sx={{ flexDirection: { xs: 'column', md: 'unset' }, borderWidth: 10, borderColor: '#000' }}
+        <Swiper
+          style={{
+            '--swiper-navigation-color': '#fff',
+            '--swiper-pagination-color': '#fff',
+          }}
+          speed={600}
+          parallax={true}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          modules={[Parallax, Pagination, Navigation]}
+          className="mySwiper"
         >
-          <Grid item xs={12} md={7}>
-            <Box
-              sx={{
-                textAlign: { xs: 'center', md: 'left' },
-                height: '100%',
-                borderWidth: 10,
-                borderColor: '#000',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
+          <SwiperSlide>
+            <div
+              slot="container-start"
+              className="parallax-bg"
+              style={{
+                'background-image': 'url(https://swiperjs.com/demos/images/nature-1.jpg)',
               }}
-            >
-              <Box sx={{ mb: 3, borderWidth: 1 }}>
-                <Typography
-                  component="h2"
-                  sx={{
-                    position: 'relative',
-                    fontSize: { xs: 40, md: 72 },
-                    letterSpacing: 1.5,
-                    fontWeight: 'bold',
-                    lineHeight: 1.3,
-                  }}
-                >
-                  <Typography
-                    component="mark"
-                    sx={{
-                      position: 'relative',
-                      color: '#0000FF',
-                      fontSize: 'inherit',
-                      fontWeight: 'inherit',
-                      backgroundColor: 'unset',
-                    }}
-                  >
-                    Science{' '}
-                    <Box
-                      sx={{
-                        position: 'absolute',
-                        top: { xs: 24, md: 34 },
-                        left: 2,
-                        transform: 'rotate(3deg)',
-                        '& img': { width: { xs: 146, md: 210 }, height: 'auto' },
-                      }}
-                    >
-                      {/* eslint-disable-next-line */}
-                      <img src="/images/headline-curve.svg" alt="Headline curve" />
-                    </Box>
-                  </Typography>
-                  &{' '}
-                  <Typography
-                    component="span"
-                    sx={{
-                      fontSize: 'inherit',
-                      color: '#bf0b6d',
-                      fontWeight: 'inherit',
-                      position: 'relative',
-                      '& svg': {
-                        position: 'absolute',
-                        top: -16,
-                        right: -21,
-                        width: { xs: 22, md: 30 },
-                        height: 'auto',
-                      },
-                    }}
-                  >
-                    Enigneering
-                    <svg version="1.1" viewBox="0 0 3183 3072">
-                      <g id="Layer_x0020_1">
-                        <path
-                          fill="#127C71"
-                          d="M2600 224c0,0 0,0 0,0 236,198 259,562 52,809 -254,303 -1849,2089 -2221,1776 -301,-190 917,-1964 1363,-2496 207,-247 570,-287 806,-89z"
-                        />
-                        <path
-                          fill="#127C71"
-                          d="M3166 2190c0,0 0,0 0,0 64,210 -58,443 -270,516 -260,90 -1848,585 -1948,252 -104,-230 1262,-860 1718,-1018 212,-73 437,39 500,250z"
-                        />
-                        <path
-                          fill="#127C71"
-                          d="M566 3c0,0 0,0 0,0 -219,-26 -427,134 -462,356 -44,271 -255,1921 90,1962 245,62 628,-1392 704,-1869 36,-221 -114,-424 -332,-449z"
-                        />
-                      </g>
-                    </svg>
-                  </Typography>{' '}
-                  <br />
-                  Festival UCP
-                </Typography>
-              </Box>
-              {/* <Box sx={{ mb: 4, width: { xs: '100%', md: '70%' } }}>
-                <Typography sx={{ color: 'text.secondary', lineHeight: 1.6 }}>
-                  {
-                    "Let's take an online course to improve your skills in a different way, you can set your own study time according to your learning speed. So you san study comfortable and absorb tge material easily."
-                  }
-                </Typography>
-              </Box> */}
-              {/* <Box sx={{ '& button': { mr: 2 } }}>
-                <ScrollLink to="popular-course" spy={true} smooth={true} offset={0} duration={350}>
-                  <StyledButton color="primary" size="large" variant="contained">
-                    Get Started
-                  </StyledButton>
-                </ScrollLink>
-                <ScrollLink to="video-section" spy={true} smooth={true} offset={0} duration={350}>
-                  <StyledButton color="primary" size="large" variant="outlined" startIcon={<PlayArrowIcon />}>
-                    Watch Video
-                  </StyledButton>
-                </ScrollLink>
-              </Box> */}
-            </Box>
-          </Grid>
-          <Grid item xs={12} md={5} sx={{ position: 'relative', mb: 4 }}>
-            <Box sx={{ lineHeight: 0 }}>
-              <Image src="/images/image.png" width={900} height={1150} alt="Hero img" />
-            </Box>
-          </Grid>
-        </Grid>
-
-        {/* Experience */}
-        <Box sx={{ boxShadow: 2, py: 4, px: 7, borderRadius: 4, backgroundColor: '#fff' }}>
-          <Grid container spacing={2}>
-            {exps.map((item) => (
-              <Grid key={item.value} item xs={12} md={4}>
-                <ExpItem item={item} />
-              </Grid>
-            ))}
-          </Grid>
-        </Box>
+              data-swiper-parallax="-40%"
+            ></div>
+            <div className="title" data-swiper-parallax="-700">
+              Slide 1
+            </div>
+            <div className="subtitle" data-swiper-parallax="-200">
+              Subtitle
+            </div>
+            <div className="text" data-swiper-parallax="-100">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus
+                felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer
+                laoreet magna nec elit suscipit, ac laoreet nibh euismod. Aliquam hendrerit lorem at elit facilisis
+                rutrum. Ut at ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut libero.
+                Aenean feugiat non eros quis feugiat.
+              </p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div
+              slot="container-start"
+              className="parallax-bg"
+              style={{
+                'background-image': 'url(https://swiperjs.com/demos/images/nature-1.jpg)',
+              }}
+              data-swiper-parallax="-23%"
+            ></div>
+            <div className="title" data-swiper-parallax="-300">
+              Slide 2
+            </div>
+            <div className="subtitle" data-swiper-parallax="-200">
+              Subtitle
+            </div>
+            <div className="text" data-swiper-parallax="-100">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus
+                felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer
+                laoreet magna nec elit suscipit, ac laoreet nibh euismod. Aliquam hendrerit lorem at elit facilisis
+                rutrum. Ut at ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut libero.
+                Aenean feugiat non eros quis feugiat.
+              </p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div
+              slot="container-start"
+              className="parallax-bg"
+              style={{
+                'background-image': 'url(https://swiperjs.com/demos/images/nature-1.jpg)',
+              }}
+              data-swiper-parallax="-23%"
+            ></div>
+            <div className="title" data-swiper-parallax="-300">
+              Slide 3
+            </div>
+            <div className="subtitle" data-swiper-parallax="-200">
+              Subtitle
+            </div>
+            <div className="text" data-swiper-parallax="-100">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus
+                felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer
+                laoreet magna nec elit suscipit, ac laoreet nibh euismod. Aliquam hendrerit lorem at elit facilisis
+                rutrum. Ut at ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut libero.
+                Aenean feugiat non eros quis feugiat.
+              </p>
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </Container>
     </Box>
   )

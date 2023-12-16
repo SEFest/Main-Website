@@ -11,7 +11,7 @@ import '@/styles/globals.css'
 import '@/styles/react-slick.css'
 import { NextPageWithLayout } from '@/interfaces/layout'
 import '../components/countDown/countdown.css'
-
+import '../styles/swipper.css'
 // import 'slick-carousel/slick/slick-theme.css'
 
 // Client-side cache, shared for the whole session of the user in the browser.
