@@ -7,6 +7,9 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import mainImage from '../../../public/images/mainimg.png'
+import mainImage1 from '../../../public/images/carouselimg.jpg'
+import mainImage2 from '../../../public/images/image.png'
+import mainImage3 from '../../../public/images/carouselImage.png'
 const HomeHero: FC = () => {
   return (
     <Swiper
@@ -15,7 +18,7 @@ const HomeHero: FC = () => {
         '--swiper-pagination-color': '#fff',
       }}
       autoplay={{
-        delay: 3000,
+        delay: 5000,
         disableOnInteraction: false,
       }}
       speed={600}
@@ -40,7 +43,7 @@ const HomeHero: FC = () => {
       </SwiperSlide>
       <SwiperSlide>
         <div slot="container-start" className="parallax-bg" data-swiper-parallax="-70%">
-          <Image src={mainImage} alt="Image" className="picture" />
+          <Image src={mainImage1} alt="Image" className="picture" />
           <div className="title" data-swiper-parallax="-700">
             Slide 2
           </div>
@@ -51,7 +54,7 @@ const HomeHero: FC = () => {
       </SwiperSlide>
       <SwiperSlide>
         <div slot="container-start" className="parallax-bg" data-swiper-parallax="-70%">
-          <Image src={mainImage} alt="Image" className="picture" />
+          <Image src={mainImage2} alt="Image" className="picture" />
           <div className="title" data-swiper-parallax="-700">
             Slide 3
           </div>
@@ -59,7 +62,18 @@ const HomeHero: FC = () => {
             Subtitle
           </div>
         </div>
-      </SwiperSlide>
+      </SwiperSlide>{' '}
+      <SwiperSlide>
+        <div slot="container-start" className="parallax-bg" data-swiper-parallax="-70%">
+          <Image src={mainImage3} alt="Image" className="picture" />
+          <div className="title" data-swiper-parallax="-700">
+            Slide 3
+          </div>
+          <div className="subtitle" data-swiper-parallax="-200">
+            Subtitle
+          </div>
+        </div>
+      </SwiperSlide>{' '}
     </Swiper>
   )
 }

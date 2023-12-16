@@ -41,7 +41,12 @@ const HomeFeature: FC = () => {
       <Box id="feature" sx={{ py: { xs: 10, md: 14 }, backgroundColor: 'background.paper' }}>
         <Container>
           <Grid container spacing={3}>
-            <Grid item xs={12} md={15}>
+            <Grid item xs={12} md={6} sx={{ display: { xs: 'none', md: 'block' } }}>
+              <Box sx={{ width: { xs: '100%', md: '90%' } }}>
+                <Image src="/images/aboutImage.jpg" alt="Testimonial img" width={1000} height={700} />
+              </Box>
+            </Grid>
+            <Grid item xs={12} md={6}>
               <Typography
                 component="h2"
                 sx={{
@@ -77,7 +82,7 @@ const HomeFeature: FC = () => {
           </Grid>
         </Container>
       </Box>
-      <Box id="departments" sx={{ py: { xs: 10, md: 14 }, backgroundColor: 'background.paper' }}>
+      <Box id="departments" sx={{ pb: { xs: 10, md: 14 }, backgroundColor: 'background.paper' }}>
         <Container>
           <Grid container spacing={3}>
             <Grid item xs={12} md={15}>
@@ -132,9 +137,9 @@ const HomeFeature: FC = () => {
                         <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1, color: 'secondary.main' }}>
                           {title}
                         </Typography>
-                        {/* <Typography sx={{ lineHeight: 1.3, color: 'text.secondary' }} variant="subtitle1">
+                        <Typography sx={{ lineHeight: 1.3, color: 'text.secondary' }} variant="subtitle1">
                           {description}
-                        </Typography> */}
+                        </Typography>
                       </Box>
                     </Box>
                   </Grid>
