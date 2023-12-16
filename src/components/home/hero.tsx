@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
-
+import mainImage from '../../../public/images/mainImage.jpg'
 const HomeHero: FC = () => {
   return (
     <Swiper
@@ -29,7 +29,7 @@ const HomeHero: FC = () => {
     >
       <SwiperSlide>
         <div slot="container-start" className="parallax-bg" data-swiper-parallax="-70%">
-          <Image src={require('../../../public/images/DSC_6642.jpg')} alt="Image" className="picture" />
+          <Image src={mainImage} alt="Image" className="picture" />
           <div className="title" data-swiper-parallax="-700">
             Slide 1
           </div>
@@ -40,7 +40,7 @@ const HomeHero: FC = () => {
       </SwiperSlide>
       <SwiperSlide>
         <div slot="container-start" className="parallax-bg" data-swiper-parallax="-70%">
-          <Image src={require('../../../public/images/mainImage.jpg')} alt="Image" className="picture" />
+          <Image src={mainImage} alt="Image" className="picture" />
           <div className="title" data-swiper-parallax="-700">
             Slide 2
           </div>
@@ -51,7 +51,7 @@ const HomeHero: FC = () => {
       </SwiperSlide>
       <SwiperSlide>
         <div slot="container-start" className="parallax-bg" data-swiper-parallax="-70%">
-          <Image src={require('../../../public/images/DSC_6642.jpg')} alt="Image" className="picture" />
+          <Image src={mainImage} alt="Image" className="picture" />
           <div className="title" data-swiper-parallax="-700">
             Slide 3
           </div>
