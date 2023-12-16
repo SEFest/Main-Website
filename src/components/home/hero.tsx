@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
-import mainImage from '../../../public/images/mainImage.jpg'
+import mainImage from '../../../public/images/mainimg.png'
 const HomeHero: FC = () => {
   return (
     <Swiper
