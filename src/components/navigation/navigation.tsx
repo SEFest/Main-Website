@@ -2,8 +2,10 @@ import React, { FC } from 'react'
 import Box from '@mui/material/Box'
 import { Link as ScrollLink } from 'react-scroll'
 import { navigations } from './navigation.data'
-
 const Navigation: FC = () => {
+  const handleOpenPDF = () => {
+    window.open('/sample.pdf', '_blank')
+  }
   return (
     <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' } }}>
       {navigations.map(({ path: destination, label }) => (
@@ -11,7 +13,8 @@ const Navigation: FC = () => {
           component={ScrollLink}
           key={destination}
           activeClass="current"
-          to={destination}
+          to={label === 'Booklet' ? null : destination}
+          onClick={label === 'Booklet' ? handleOpenPDF : undefined}
           spy={true}
           smooth={true}
           duration={350}

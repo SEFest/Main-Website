@@ -3,31 +3,36 @@
   color: #fff;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  /* height: 50%; */
 }
 
 .parallax-bg {
-  /* width: 100%; */
   position: relative;
 }
 .picture {
   position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.absolute-container {
+  position: absolute;
+  width: 20vw;
+  right: 5vw;
+  height: auto;
+  top: 5vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 2vw;
 }
 .title {
-  position: absolute;
-  top: 2rem;
-  font-size: 41px;
+  font-size: 4vw;
   font-weight: 300;
 }
 
 .subtitle {
-  position: absolute;
-  top: 5rem;
-  font-size: 21px;
+  font-size: 2vw;
 }
 
 .swiper-slide .text {
   font-size: 14px;
-  max-width: 30rem;
   line-height: 1.3;
 }

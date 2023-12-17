@@ -29,7 +29,9 @@ const ModalComponent: React.FC<ModalProps> = ({ open, onClose, selectedItem }) =
   const handleClose = () => {
     onClose()
   }
-
+  const handleOpenPDF = () => {
+    window.open('/sample.pdf', '_blank')
+  }
   return (
     <>
       <Dialog
@@ -63,7 +65,7 @@ const ModalComponent: React.FC<ModalProps> = ({ open, onClose, selectedItem }) =
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button>View Rule Book</Button>
+          <Button onClick={handleOpenPDF}>View Rule Book</Button>
         </DialogActions>
         <DialogActions>
           <Button onClick={handleClose}>Close</Button>

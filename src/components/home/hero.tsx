@@ -17,10 +17,10 @@ const HomeHero: FC = () => {
         '--swiper-navigation-color': '#fff',
         '--swiper-pagination-color': '#fff',
       }}
-      autoplay={{
-        delay: 5000,
-        disableOnInteraction: false,
-      }}
+      // autoplay={{
+      //   delay: 5000,
+      //   disableOnInteraction: false,
+      // }}
       speed={600}
       loop={true}
       parallax={true}
@@ -33,47 +33,55 @@ const HomeHero: FC = () => {
       <SwiperSlide>
         <div slot="container-start" className="parallax-bg" data-swiper-parallax="-70%">
           <Image src={mainImage} alt="Image" className="picture" />
-          <div className="title" data-swiper-parallax="-700">
-            Slide 1
-          </div>
-          <div className="subtitle" data-swiper-parallax="-200">
-            Subtitle
+          <div className="absolute-container">
+            <div className="title" data-swiper-parallax="-700">
+              Slide 1
+            </div>
+            <div className="subtitle" data-swiper-parallax="-200">
+              Subtitle
+            </div>
           </div>
         </div>
       </SwiperSlide>
       <SwiperSlide>
         <div slot="container-start" className="parallax-bg" data-swiper-parallax="-70%">
           <Image src={mainImage1} alt="Image" className="picture" />
-          <div className="title" data-swiper-parallax="-700">
-            Slide 2
-          </div>
-          <div className="subtitle" data-swiper-parallax="-200">
-            Subtitle
+          <div className="absolute-container">
+            <div className="title" data-swiper-parallax="-700">
+              Slide 2
+            </div>
+            <div className="subtitle" data-swiper-parallax="-200">
+              Subtitle
+            </div>
           </div>
         </div>
       </SwiperSlide>
       <SwiperSlide>
         <div slot="container-start" className="parallax-bg" data-swiper-parallax="-70%">
           <Image src={mainImage2} alt="Image" className="picture" />
-          <div className="title" data-swiper-parallax="-700">
-            Slide 3
-          </div>
-          <div className="subtitle" data-swiper-parallax="-200">
-            Subtitle
+          <div className="absolute-container">
+            <div className="title" data-swiper-parallax="-700">
+              Slide 3
+            </div>
+            <div className="subtitle" data-swiper-parallax="-200">
+              Subtitle
+            </div>
           </div>
         </div>
-      </SwiperSlide>{' '}
+      </SwiperSlide>
       <SwiperSlide>
         <div slot="container-start" className="parallax-bg" data-swiper-parallax="-70%">
           <Image src={mainImage3} alt="Image" className="picture" />
-          <div className="title" data-swiper-parallax="-700">
-            Slide 3
-          </div>
-          <div className="subtitle" data-swiper-parallax="-200">
-            Subtitle
+          <div className="absolute-container">
+            <div className="title" data-swiper-parallax="-700">
+              Slide 4
+            </div>
+            <div className="subtitle" data-swiper-parallax="-200">
+              Subtitle
+            </div>
           </div>
         </div>
-      </SwiperSlide>{' '}
+      </SwiperSlide>
     </Swiper>
   )
 }
