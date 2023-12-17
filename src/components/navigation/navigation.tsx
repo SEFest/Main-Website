@@ -13,7 +13,7 @@ const Navigation: FC = () => {
           component={ScrollLink}
           key={destination}
           activeClass="current"
-          to={label === 'Booklet' ? null : destination}
+          to={label === 'Booklet' ? 'null' : destination}
           onClick={label === 'Booklet' ? handleOpenPDF : undefined}
           spy={true}
           smooth={true}
