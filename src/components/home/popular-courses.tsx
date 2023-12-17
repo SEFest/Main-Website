@@ -19,6 +19,7 @@ interface SliderArrowArrow {
   type: 'next' | 'prev'
   className?: 'string'
 }
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 
 const SliderArrow: FC<SliderArrowArrow> = (props) => {
   const { onClick, type, className } = props
@@ -43,6 +44,7 @@ const SliderArrow: FC<SliderArrowArrow> = (props) => {
     </IconButton>
   )
 }
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 
 const StyledDots = styled('ul')(({ theme }) => ({
   '&.slick-dots': {
@@ -75,6 +77,8 @@ const HomePopularCourse: FC = () => {
     setSelectedItem(null)
     setIsModalOpen(false)
   }
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+
   const sliderConfig: Settings = {
     infinite: true,
     autoplay: true,

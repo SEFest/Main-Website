@@ -13,6 +13,8 @@ interface Props {
 }
 
 const CourseCardItem: FC<Props> = ({ item, onOpenModal }) => {
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+
   const handleOpenModal = () => {
     onOpenModal(item)
   }
