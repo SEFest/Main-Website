@@ -23,6 +23,7 @@ const Transition = React.forwardRef(function Transition(
 ) {
   return <Slide direction="up" ref={ref} {...props} />
 })
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 
 const ModalComponent: React.FC<ModalProps> = ({ open, onClose, selectedItem }) => {
   const handleClose = () => {

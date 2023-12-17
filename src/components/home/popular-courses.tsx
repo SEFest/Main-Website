@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react'
+import React, { FC } from 'react'
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 import Slider, { Settings } from 'react-slick'
@@ -13,7 +13,6 @@ import { data } from './popular-course.data'
 import { CourseCardItem } from '@/components/course'
 import ModalComponent from './Modal'
 import { Course } from '@/interfaces/course'
-import Modal from './Modal'
 
 interface SliderArrowArrow {
   onClick?: () => void
@@ -66,12 +65,12 @@ const HomePopularCourse: FC = () => {
   const matchMobileView = useMediaQuery(breakpoints.down('md'))
   const [selectedItem, setSelectedItem] = React.useState<Course | null>(null)
   const [isModalOpen, setIsModalOpen] = React.useState(false)
-
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   const handleOpenModal = (item: Course) => {
     setSelectedItem(item)
     setIsModalOpen(true)
   }
-
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   const handleCloseModal = () => {
     setSelectedItem(null)
     setIsModalOpen(false)
