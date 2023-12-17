@@ -9,15 +9,21 @@ import { Course } from '@/interfaces/course'
 
 interface Props {
   item: Course
+  onOpenModal: (item: Course) => void
 }
 
-const CourseCardItem: FC<Props> = ({ item }) => {
+const CourseCardItem: FC<Props> = ({ item, onOpenModal }) => {
+  const handleOpenModal = () => {
+    onOpenModal(item)
+  }
   return (
     <Box
       sx={{
         px: 1,
         py: 4,
+        cursor: 'pointer',
       }}
+      onClick={handleOpenModal}
     >
       <Box
         sx={{

@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, useState } from 'react'
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 import Slider, { Settings } from 'react-slick'
@@ -11,6 +11,9 @@ import IconArrowForward from '@mui/icons-material/ArrowForward'
 
 import { data } from './popular-course.data'
 import { CourseCardItem } from '@/components/course'
+import ModalComponent from './Modal'
+import { Course } from '@/interfaces/course'
+import Modal from './Modal'
 
 interface SliderArrowArrow {
   onClick?: () => void
@@ -61,7 +64,18 @@ const StyledDots = styled('ul')(({ theme }) => ({
 const HomePopularCourse: FC = () => {
   const { breakpoints } = useTheme()
   const matchMobileView = useMediaQuery(breakpoints.down('md'))
+  const [selectedItem, setSelectedItem] = React.useState<Course | null>(null)
+  const [isModalOpen, setIsModalOpen] = React.useState(false)
 
+  const handleOpenModal = (item: Course) => {
+    setSelectedItem(item)
+    setIsModalOpen(true)
+  }
+
+  const handleCloseModal = () => {
+    setSelectedItem(null)
+    setIsModalOpen(false)
+  }
   const sliderConfig: Settings = {
     infinite: true,
     autoplay: true,
@@ -110,9 +124,10 @@ const HomePopularCourse: FC = () => {
           <Grid item xs={12} md={9}>
             <Slider {...sliderConfig}>
               {data.map((item) => (
-                <CourseCardItem key={String(item.id)} item={item} />
+                <CourseCardItem key={String(item.id)} item={item} onOpenModal={handleOpenModal} />
               ))}
             </Slider>
+            <ModalComponent open={isModalOpen} onClose={handleCloseModal} selectedItem={selectedItem} />
           </Grid>
         </Grid>
       </Container>
