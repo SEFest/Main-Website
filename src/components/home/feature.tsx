@@ -34,7 +34,7 @@ const BorderLinearProgress = styled(LinearProgress, {
     }),
   },
 }))
-const handleTitleClick = (title) => {
+const handleTitleClick = (title: any) => {
   let redirectUrl
   if (
     title === 'Department Of Mechanical Engineering' ||
