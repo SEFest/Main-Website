@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react'
 // import './countdown.css'
 import { useCountdown } from '../hooks/useCountdown.js'
 import { LaunchContext } from '../context/LaunchTime'
-import { Box, Grid, Typography } from '@mui/material'
+import { Box, Container, Grid, Typography } from '@mui/material'
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 const DateTimeDisplay = ({ value, type, isDanger }) => {
   return (
@@ -88,20 +88,21 @@ const CountdownTimer = ({ targetDate }) => {
   } else {
     return (
       <Grid item xs={12} md={5}>
-        <Box
-          sx={{
-            height: '100%',
-            width: { xs: '100%', md: '90%' },
-            display: 'inline-flex',
-            alignItems: 'center',
-            justifyContent: { xs: 'center', md: 'flex-start' },
-          }}
-        >
+        <Box>
           <Typography variant="h1" sx={{ ml: { xs: 0, md: 45 }, fontSize: { xs: 30, md: 48 } }}>
             Join this event
           </Typography>
         </Box>
-        <ShowCounter days={days} hours={hours} minutes={minutes} seconds={seconds} />
+        <Box
+          sx={{
+            backgroundColor: 'secondary.main',
+            borderRadius: 5,
+            marginX: '20vw',
+            paddingY: '2vh',
+          }}
+        >
+          <ShowCounter days={days} hours={hours} minutes={minutes} seconds={seconds} />
+        </Box>
       </Grid>
     )
   }

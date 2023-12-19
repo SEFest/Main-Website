@@ -44,9 +44,6 @@ const MentorCardItem: FC<Props> = ({ item }) => {
             {item.name}
           </Typography>{' '}
           <Typography sx={{ mb: 2, color: 'text.secondary' }}>{item.category}</Typography>
-          <Typography sx={{ mb: 2, color: 'text.secondary' }} variant="subtitle1">
-            {item.description}
-          </Typography>
         </Box>
       </Box>
     </Box>

@@ -19,9 +19,7 @@ const Home: NextPageWithLayout = () => {
       <CountDown targetDate={undefined} />
       <DynamicHomePopularCourse />
       <DynamicHomeFeature />
-      {/* <DynamicHomeTestimonial /> */}
       <DynamicHomeOurMentors />
-      <DynamicHomeNewsLetter />
     </>
   )
 }

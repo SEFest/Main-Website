@@ -6,59 +6,37 @@ import ContactSupportIcon from '@mui/icons-material/ContactSupport'
 
 interface Data {
   title: string
-  description: string
-  icon?: ReactNode
 }
 
 export const data: Data[] = [
   {
     title: 'Department Of Mathematics',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
-    icon: <ArtTrackIcon />,
   },
   {
     title: 'Department Of Physics',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
-    icon: <AttachMoneyIcon />,
   },
   {
     title: 'Department Of Basic & Applied Chemistry',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
-    icon: <LocalLibraryIcon />,
   },
   {
     title: 'Department Of Zoology',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
-    icon: <ContactSupportIcon />,
   },
   {
     title: 'Department Of Food Science & Technology',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
-    icon: <ContactSupportIcon />,
   },
   {
     title: 'Department Of Biotechonology',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
-    icon: <ContactSupportIcon />,
   },
   {
     title: 'Department Microbiology',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
-    icon: <ContactSupportIcon />,
   },
   {
     title: 'Department Civil Engineering',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
-    icon: <ContactSupportIcon />,
   },
   {
     title: 'Department Of Electrical Engineering',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
-    icon: <ContactSupportIcon />,
   },
   {
-    title: 'Department Of Mechanical Enigineering',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
-    icon: <ContactSupportIcon />,
+    title: 'Department Of Mechanical Engineering',
   },
 ]

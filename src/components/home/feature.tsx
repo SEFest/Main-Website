@@ -34,7 +34,19 @@ const BorderLinearProgress = styled(LinearProgress, {
     }),
   },
 }))
-
+const handleTitleClick = (title) => {
+  let redirectUrl
+  if (
+    title === 'Department Of Mechanical Engineering' ||
+    title === 'Department Civil Engineering' ||
+    title === 'Department Of Electrical Engineering'
+  ) {
+    redirectUrl = 'https://ucp.edu.pk/faculty-of-engineering/'
+  } else {
+    redirectUrl = 'https://ucp.edu.pk/faculty-of-science-technology/'
+  }
+  window.open(redirectUrl, '_blank')
+}
 const HomeFeature: FC = () => {
   return (
     <>
@@ -130,15 +142,15 @@ const HomeFeature: FC = () => {
               </Typography>
 
               <Grid container spacing={2} sx={{ ml: { xs: 0, md: 2 } }}>
-                {data.map(({ title, description, icon }, index) => (
-                  <Grid key={String(index)} item xs={12} md={6}>
+                {data.map(({ title }, index) => (
+                  <Grid key={String(index)} item xs={12} md={6} onClick={() => handleTitleClick(title)}>
                     <Box sx={{ px: 2, py: 1.5, boxShadow: 1, borderRadius: 4, display: 'flex', alignItems: 'center' }}>
                       <Box sx={{ display: 'flex', flex: 1, flexDirection: 'column' }}>
-                        <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1, color: 'secondary.main' }}>
+                        <Typography
+                          variant="h3"
+                          sx={{ fontSize: '1.2rem', mb: 1, color: 'secondary.main', cursor: 'pointer' }}
+                        >
                           {title}
-                        </Typography>
-                        <Typography sx={{ lineHeight: 1.3, color: 'text.secondary' }} variant="subtitle1">
-                          {description}
                         </Typography>
                       </Box>
                     </Box>
