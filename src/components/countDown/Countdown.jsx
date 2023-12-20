@@ -88,8 +88,12 @@ const CountdownTimer = ({ targetDate }) => {
   } else {
     return (
       <Grid item xs={12} md={5}>
-        <Box>
-          <Typography variant="h1" sx={{ ml: { xs: 0, md: 45 }, fontSize: { xs: 30, md: 48 } }}>
+        <Box
+          sx={{
+            marginTop: '1rem',
+          }}
+        >
+          <Typography variant="h1" sx={{ ml: { xs: 13, md: 45 }, fontSize: { xs: 30, md: 48 } }}>
             Join this event
           </Typography>
         </Box>
@@ -97,8 +101,9 @@ const CountdownTimer = ({ targetDate }) => {
           sx={{
             backgroundColor: 'secondary.main',
             borderRadius: 5,
-            marginX: '20vw',
+            marginX: { xs: '7rem', md: '25rem' },
             paddingY: '2vh',
+            marginTop: '2rem',
           }}
         >
           <ShowCounter days={days} hours={hours} minutes={minutes} seconds={seconds} />

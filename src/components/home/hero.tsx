@@ -17,10 +17,10 @@ const HomeHero: FC = () => {
         '--swiper-navigation-color': '#fff',
         '--swiper-pagination-color': '#fff',
       }}
-      // autoplay={{
-      //   delay: 5000,
-      //   disableOnInteraction: false,
-      // }}
+      autoplay={{
+        delay: 5000,
+        disableOnInteraction: false,
+      }}
       speed={600}
       loop={true}
       parallax={true}
