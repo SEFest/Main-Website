@@ -1,21 +1,16 @@
 import React, { FC } from 'react'
 import { Box, Typography } from '@mui/material'
-
+import Image from 'next/image'
+import MainLogo from '../../../public/images/mainLogo.png'
 interface Props {
   onClick?: () => void
   variant?: 'primary' | 'secondary'
 }
 
-const Logo: FC<Props> = ({ onClick, variant }) => {
+const Logo: FC<Props> = () => {
   return (
-    <Box onClick={onClick}>
-      <Typography
-        variant="h4"
-        component="h1"
-        sx={{ fontWeight: 700, '& span': { color: variant === 'primary' ? '#0000FF' : 'unset' }, color: '#FF1493' }}
-      >
-        S&E<span>Festival</span>
-      </Typography>
+    <Box style={{ cursor: 'pointer' }} sx={{ width: { xs: 200, md: 300 }, height: { md: 60 } }}>
+      <Image src={MainLogo} alt="Logoimage" />
     </Box>
   )
 }

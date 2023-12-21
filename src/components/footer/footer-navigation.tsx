@@ -5,6 +5,7 @@ import MuiLink from '@mui/material/Link'
 import type { Navigation } from '@/interfaces/navigation'
 import { navigations as headerNavigations } from '@/components/navigation/navigation.data'
 import { FooterSectionTitle } from '@/components/footer'
+import ModalComponent from '../home/Modal'
 interface Data {
   title: string
 }
@@ -27,39 +28,6 @@ const courseMenu: Array<Navigation> = [
   },
 ]
 
-const pageMenu: Data[] = [
-  {
-    title: 'Mathematics',
-  },
-  {
-    title: 'Physics',
-  },
-  {
-    title: 'Basic & Applied Chemistry',
-  },
-  {
-    title: 'Zoology',
-  },
-  {
-    title: 'Food Science & Technology',
-  },
-  {
-    title: 'Biotechonology',
-  },
-  {
-    title: 'Microbiology',
-  },
-  {
-    title: 'Civil Engineering',
-  },
-  {
-    title: 'Electrical Engineering',
-  },
-  {
-    title: 'Mechanical Engineering',
-  },
-]
-
 const companyMenu: Array<Navigation> = [
   { label: 'Contact Us', path: '#' },
   { label: 'Privacy & Policy', path: '#' },
@@ -69,15 +37,15 @@ const companyMenu: Array<Navigation> = [
 
 interface NavigationItemProps {
   label: string
-  path: string
 }
 
-const NavigationItem: FC<NavigationItemProps> = ({ label, path }) => {
+const NavigationItem: FC<NavigationItemProps> = ({ label }) => {
   return (
-    <Link href={path} passHref>
+    <div>
       <MuiLink
         underline="hover"
         sx={{
+          cursor: 'pointer',
           display: 'block',
           mb: 1,
           color: 'primary.contrastText',
@@ -85,31 +53,44 @@ const NavigationItem: FC<NavigationItemProps> = ({ label, path }) => {
       >
         {label}
       </MuiLink>
-    </Link>
+    </div>
   )
 }
 
 const FooterNavigation: FC = () => {
+  const FAQ = { question: 'This is a question', answer: 'This is an answer' }
+  const [selectedItem, setSelectedItem] = React.useState<any>(null)
+  const [isModalOpen, setIsModalOpen] = React.useState(false)
+
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+  // const handleCloseModal = () => {
+  //   setSelectedItem(FAQ)
+  //   setIsModalOpen(false)
+  // }
+  // const handleItemClick = (label: any) => () => {
+  //   console.log('Modal')
+  //   if (label === 'FAQ') {
+  //     setSelectedItem(label)
+  //     setIsModalOpen(true)
+  //     console.log('Open FAQ modal')
+  //   }
+  // }
+
   return (
-    <Grid container spacing={2}>
-      <Grid item xs={12} md={4}>
+    <Grid container spacing={5}>
+      <Grid item xs={12} md={7}>
         <FooterSectionTitle title="Modules" />
-        {courseMenu.map(({ label, path }, index) => (
-          <NavigationItem key={index + path} label={label} path={/* path */ '#'} />
-        ))}
-      </Grid>
-      <Grid item xs={12} md={4}>
-        <FooterSectionTitle title="Departments" />
-        {pageMenu.map(({ title }, index) => (
-          <NavigationItem key={index} label={title} path={'departments'} />
+        {courseMenu.map(({ label }, index) => (
+          <NavigationItem label={label} />
         ))}
       </Grid>
       <Grid item xs={12} md={4}>
         <FooterSectionTitle title="About" />
-        {companyMenu.map(({ label, path }, index) => (
-          <NavigationItem key={index + path} label={label} path={path} />
+        {companyMenu.map(({ label }, index) => (
+          <NavigationItem key={index} label={label} />
         ))}
       </Grid>
+      {/* <ModalComponent open={isModalOpen} onClose={handleCloseModal} selectedItem={selectedItem} /> */}
     </Grid>
   )
 }

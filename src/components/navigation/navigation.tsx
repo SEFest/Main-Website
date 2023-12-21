@@ -4,7 +4,7 @@ import { Link as ScrollLink } from 'react-scroll'
 import { navigations } from './navigation.data'
 const Navigation: FC = () => {
   const handleOpenPDF = () => {
-    window.open('/sample.pdf', '_blank')
+    window.open('/Fest-Directives.pdf', '_blank')
   }
   return (
     <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' } }}>
@@ -13,8 +13,8 @@ const Navigation: FC = () => {
           component={ScrollLink}
           key={destination}
           activeClass="current"
-          to={label === 'Booklet' ? 'null' : destination}
-          onClick={label === 'Booklet' ? handleOpenPDF : undefined}
+          to={label === 'Fest Directives' ? 'null' : destination}
+          onClick={label === 'Fest Directives' ? handleOpenPDF : undefined}
           spy={true}
           smooth={true}
           duration={350}

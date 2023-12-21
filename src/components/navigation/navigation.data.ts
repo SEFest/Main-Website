@@ -22,7 +22,7 @@ export const navigations: Navigation[] = [
     path: 'mentors', // '/mentors',
   },
   {
-    label: 'Booklet',
+    label: 'Fest Directives',
     path: '#', // '/mentors',
   },
 ]

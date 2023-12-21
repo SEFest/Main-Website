@@ -12,9 +12,9 @@ const Footer: FC = () => {
       sx={{ backgroundColor: 'primary.main', py: { xs: 6, md: 10 }, color: 'primary.contrastText' }}
     >
       <Container>
-        <Grid container spacing={1}>
+        <Grid container spacing={45}>
           <Grid item xs={12} md={5}>
-            <Box sx={{ width: { xs: '100%', md: 360 }, mb: { xs: 3, md: 0 } }}>
+            <Box sx={{ width: '100%', mb: { xs: 3, md: 0 } }}>
               <Typography component="h2" variant="h2" sx={{ mb: 2 }}>
                 Science & Engineering Festival
               </Typography>

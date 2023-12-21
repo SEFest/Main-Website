@@ -30,7 +30,7 @@ const ModalComponent: React.FC<ModalProps> = ({ open, onClose, selectedItem }) =
     onClose()
   }
   const handleOpenPDF = () => {
-    window.open('/sample.pdf', '_blank')
+    window.open('/Fest-Directives.pdf', '_blank')
   }
   return (
     <>
