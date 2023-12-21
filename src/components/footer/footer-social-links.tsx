@@ -6,28 +6,19 @@ import { SocialLink } from '@/interfaces/social-link'
 export const socialLinks: SocialLink[] = [
   {
     name: 'Instagram',
-    link: '#',
-    icon: '/images/icons/instagram.svg',
+    link: 'https://www.instagram.com/scifest24.ucp?igsh=NGVhN2U2NjQ0Yg==',
+    icon: '/images/icons/instagram.png',
   },
   {
-    name: 'YouTube',
+    name: 'Facebook',
     link: '#',
-    icon: '/images/icons/youtube.svg',
+    icon: '/images/icons/facebook.png',
   },
-  {
-    name: 'Twitter',
-    link: '#',
-    icon: '/images/icons/twitter.svg',
-  },
-  {
-    name: 'Dribbble',
-    link: 'https://dribbble.com/shots/18114471-Coursespace-Online-Course-Landing-Page',
-    icon: '/images/icons/dribbble.svg',
-  },
+
   {
     name: 'Github',
-    link: 'https://github.com/hiriski/coursespace-landing-page',
-    icon: '/images/icons/github.svg',
+    link: 'https://github.com/SEFest',
+    icon: '/images/icons/github.png',
   },
 ]
 
@@ -51,16 +42,13 @@ const SocialLinkItem: FC<SocialLinkItemProps> = ({ item }) => (
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        width: 36,
-        height: 36,
+        width: 50,
+        height: 50,
         borderRadius: '50%',
         color: 'inherit',
-        '&:hover': {
-          backgroundColor: 'secondary.main',
-        },
         '& img': {
           fill: 'currentColor',
-          width: 22,
+          width: 35,
           height: 'auto',
         },
       }}
@@ -81,8 +69,6 @@ const SocialLinks: FC = () => {
         sx={{
           m: 0,
           p: 0,
-          lineHeight: 0,
-          borderRadius: 3,
           listStyle: 'none',
         }}
       >
