@@ -81,7 +81,7 @@ const FooterNavigation: FC = () => {
       <Grid item xs={12} md={7}>
         <FooterSectionTitle title="Modules" />
         {courseMenu.map(({ label }, index) => (
-          <NavigationItem label={label} />
+          <NavigationItem label={label} key={index} />
         ))}
       </Grid>
       <Grid item xs={12} md={4}>
