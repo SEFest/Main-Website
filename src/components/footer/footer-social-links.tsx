@@ -11,7 +11,7 @@ export const socialLinks: SocialLink[] = [
   },
   {
     name: 'Facebook',
-    link: '#',
+    link: 'https://www.facebook.com/SEF.UCP?mibextid=gik2fB',
     icon: '/images/icons/facebook.png',
   },
 
