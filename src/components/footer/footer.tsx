@@ -19,8 +19,8 @@ const Footer: FC = () => {
                 Science & Engineering Festival
               </Typography>
               <Typography variant="subtitle1" sx={{ letterSpacing: 1, mb: 2 }}>
-                Science & Engineering Festival is an annual event hosted jointly by UCP's Faculty of Science& Technology
-                and Faculty of Engineering now.
+                Science & Engineering Festival is an annual event hosted jointly by UCP&apos;s Faculty of Science&
+                Technology and Faculty of Engineering now.
               </Typography>
               <FooterSocialLinks />
             </Box>
