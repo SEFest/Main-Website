@@ -93,7 +93,7 @@ const CountdownTimer = ({ targetDate }) => {
             marginTop: '1rem',
           }}
         >
-          <Typography variant="h1" sx={{ ml: { xs: 13, md: 45 }, fontSize: { xs: 30, md: 48 } }}>
+          <Typography variant="h1" sx={{ ml: '20vw', fontSize: { xs: 30, md: 48 } }}>
             Join this event
           </Typography>
         </Box>
@@ -101,7 +101,8 @@ const CountdownTimer = ({ targetDate }) => {
           sx={{
             backgroundColor: 'secondary.main',
             borderRadius: 5,
-            marginX: { xs: '7rem', md: '25rem' },
+            // marginX: { xs: '20vw', lg: '25vw', md: '12vw' },
+            marginX: '25vw',
             paddingY: '2vh',
             marginTop: '2rem',
           }}

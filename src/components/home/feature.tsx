@@ -87,8 +87,10 @@ const HomeFeature: FC = () => {
               </Typography>
 
               <Typography sx={{ color: 'text.secondary', mb: 2, ml: { xs: 0, md: 4 } }}>
-                Set the way of learning according to your wishes with some of the benefits that you get us, so you on
-                enjoy the lessons that we provide.
+                Welcome to the Science and Engineering Fest 2024, a collaborative initiative by the Faculty of
+                Engineering (FOE) and Faculty of Science and Technology (FOST). Our mission is to inspire, educate, and
+                celebrate the diverse facets of science and engineering. Join us in fostering a community of curiosity,
+                innovation, and knowledge.
               </Typography>
             </Grid>
           </Grid>
@@ -137,8 +139,10 @@ const HomeFeature: FC = () => {
               </Typography>
 
               <Typography sx={{ color: 'text.secondary', mb: 2, ml: { xs: 0, md: 4 } }}>
-                Set the way of learning according to your wishes with some of the benefits that you get us, so you on
-                enjoy the lessons that we provide.
+                Discover the exciting worlds of science and engineering within our unique departments. From exploring
+                the wonders of nature to crafting cutting-edge technologies, each department is a hub of creativity and
+                innovation. Join us on this journey of discovery and advancement as we push the boundaries of
+                knowledge together
               </Typography>
 
               <Grid container spacing={2} sx={{ ml: { xs: 0, md: 2 } }}>

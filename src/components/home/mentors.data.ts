@@ -5,7 +5,7 @@ export const data: Array<Mentor> = [
     id: 1,
     photo: '/images/mentors/christian-buehner-DItYlc26zVI-unsplash.jpg',
     name: 'Dr. Shafiq Ur Rehman',
-    category: 'Cheif Organ',
+    category: 'Cheif Organizer',
   },
   {
     id: 2,

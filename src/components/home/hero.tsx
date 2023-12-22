@@ -17,10 +17,10 @@ const HomeHero: FC = () => {
         '--swiper-navigation-color': '#fff',
         '--swiper-pagination-color': '#fff',
       }}
-      autoplay={{
-        delay: 5000,
-        disableOnInteraction: false,
-      }}
+      // autoplay={{
+      //   delay: 5000,
+      //   disableOnInteraction: false,
+      // }}
       speed={600}
       loop={true}
       parallax={true}
@@ -35,10 +35,11 @@ const HomeHero: FC = () => {
           <Image src={mainImage} alt="Image" className="picture" />
           <div className="absolute-container">
             <div className="title" data-swiper-parallax="-700">
-              Slide 1
+              Flashback to Festive Cheers!
             </div>
             <div className="subtitle" data-swiper-parallax="-200">
-              Subtitle
+              Relive the joyous moments from last year's celebration at Science and Engineering Fest 2023 – where
+              laughter and merriment filled the air!
             </div>
           </div>
         </div>
@@ -48,10 +49,11 @@ const HomeHero: FC = () => {
           <Image src={mainImage1} alt="Image" className="picture" />
           <div className="absolute-container">
             <div className="title" data-swiper-parallax="-700">
-              Slide 2
+              Last year's achievement!
             </div>
             <div className="subtitle" data-swiper-parallax="-200">
-              Subtitle
+              Celebrate the success of last year's Science and Engineering Fest with joyous cake-cutting, capturing the
+              spirit of achievement and happiness.
             </div>
           </div>
         </div>
@@ -61,10 +63,11 @@ const HomeHero: FC = () => {
           <Image src={mainImage2} alt="Image" className="picture" />
           <div className="absolute-container">
             <div className="title" data-swiper-parallax="-700">
-              Slide 3
+              Game On – Fun Remembered!
             </div>
             <div className="subtitle" data-swiper-parallax="-200">
-              Subtitle
+              Jam, Brain Games, Human Ludo, Rubik’s Rumble, and Paper Plane challenges from last year’s fest – where the
+              thrill of fun and games lingered in every moment!
             </div>
           </div>
         </div>
@@ -74,10 +77,10 @@ const HomeHero: FC = () => {
           <Image src={mainImage3} alt="Image" className="picture" />
           <div className="absolute-container">
             <div className="title" data-swiper-parallax="-700">
-              Slide 4
+              Exhibit Extravaganza
             </div>
             <div className="subtitle" data-swiper-parallax="-200">
-              Subtitle
+              Relive the excitement of Science Cinema, Science Circus, and the Mini Zoo – unforgettable exhibitions.
             </div>
           </div>
         </div>

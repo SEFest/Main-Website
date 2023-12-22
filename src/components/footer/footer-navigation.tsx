@@ -28,11 +28,11 @@ const courseMenu: Array<Navigation> = [
   },
 ]
 
-const companyMenu: Array<Navigation> = [
-  { label: 'Contact Us', path: '#' },
-  { label: 'Privacy & Policy', path: '#' },
-  { label: 'Term & Condition', path: '#' },
-  { label: 'FAQ', path: '#' },
+const companyMenu: Array<Data> = [
+  { title: 'Dr. Shafiq Ur Rehman' },
+  { title: '+92 333 4566845' },
+  { title: 'Engr. Nabeel Khalid' },
+  { title: '+92 344 9008008' },
 ]
 
 interface NavigationItemProps {
@@ -61,20 +61,18 @@ const FooterNavigation: FC = () => {
   const FAQ = { question: 'This is a question', answer: 'This is an answer' }
   const [selectedItem, setSelectedItem] = React.useState<any>(null)
   const [isModalOpen, setIsModalOpen] = React.useState(false)
+  const removeSpaces = (inputString: string) => {
+    return inputString.replace(/\s/g, '')
+  }
+  const openLinkForPhoneNumber = (phoneNumber: string) => {
+    let link = ''
 
-  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-  // const handleCloseModal = () => {
-  //   setSelectedItem(FAQ)
-  //   setIsModalOpen(false)
-  // }
-  // const handleItemClick = (label: any) => () => {
-  //   console.log('Modal')
-  //   if (label === 'FAQ') {
-  //     setSelectedItem(label)
-  //     setIsModalOpen(true)
-  //     console.log('Open FAQ modal')
-  //   }
-  // }
+    if (phoneNumber === '+92 333 4566845' || phoneNumber === '+92 344 9008008') {
+      const removedNumber = removeSpaces(phoneNumber)
+      link = `https://wa.me/${removedNumber}`
+      window.open(link, '_blank')
+    }
+  }
 
   return (
     <Grid container spacing={5}>
@@ -85,9 +83,11 @@ const FooterNavigation: FC = () => {
         ))}
       </Grid>
       <Grid item xs={12} md={4}>
-        <FooterSectionTitle title="About" />
-        {companyMenu.map(({ label }, index) => (
-          <NavigationItem key={index} label={label} />
+        <FooterSectionTitle title="Contact Us" />
+        {companyMenu.map(({ title }, index) => (
+          <div key={index} onClick={() => openLinkForPhoneNumber(title)}>
+            <NavigationItem key={index} label={title} />
+          </div>
         ))}
       </Grid>
       {/* <ModalComponent open={isModalOpen} onClose={handleCloseModal} selectedItem={selectedItem} /> */}
