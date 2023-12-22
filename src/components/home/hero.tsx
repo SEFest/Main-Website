@@ -38,7 +38,7 @@ const HomeHero: FC = () => {
               Flashback to Festive Cheers!
             </div>
             <div className="subtitle" data-swiper-parallax="-200">
-              Relive the joyous moments from last year's celebration at Science and Engineering Fest 2023 – where
+              Relive the joyous moments from last year&apos;s celebration at Science and Engineering Fest 2023 – where
               laughter and merriment filled the air!
             </div>
           </div>
@@ -49,11 +49,11 @@ const HomeHero: FC = () => {
           <Image src={mainImage1} alt="Image" className="picture" />
           <div className="absolute-container">
             <div className="title" data-swiper-parallax="-700">
-              Last year's achievement!
+              Last year&apos;s achievement!
             </div>
             <div className="subtitle" data-swiper-parallax="-200">
-              Celebrate the success of last year's Science and Engineering Fest with joyous cake-cutting, capturing the
-              spirit of achievement and happiness.
+              Celebrate the success of last year&apos;s Science and Engineering Fest with joyous cake-cutting, capturing
+              the spirit of achievement and happiness.
             </div>
           </div>
         </div>
