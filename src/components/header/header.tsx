@@ -39,14 +39,16 @@ const Header: FC = () => {
                 backgroundColor: 'background.paper',
                 zIndex: 'appBar',
                 position: 'fixed',
-                height: { xs: '100vh', md: 'auto' },
+                height: { xs: '60vh', md: 'auto' },
                 top: visibleMenu ? 0 : '-120vh',
                 left: 0,
               }),
             }}
           >
-            <Box />
+            {/* <Box /> */}
+            {/* <div onClick={() => stateChange()}> */}
             <Navigation />
+            {/* </div> */}
             <AuthNavigation />
             {visibleMenu && matchMobileView && (
               <IconButton
