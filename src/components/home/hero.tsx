@@ -13,22 +13,14 @@ import mainImage3 from '../../../public/images/carouselImage.png'
 const HomeHero: FC = () => {
   return (
     <Swiper
-      style={{
-        '--swiper-navigation-color': '#fff',
-        '--swiper-pagination-color': '#fff',
+      autoplay={{
+        delay: 4000,
+        disableOnInteraction: false,
       }}
-      // autoplay={{
-      //   delay: 5000,
-      //   disableOnInteraction: false,
-      // }}
-      speed={600}
+      speed={800}
       loop={true}
       parallax={true}
-      pagination={{
-        clickable: true,
-      }}
-      navigation={true}
-      modules={[Autoplay, Pagination, Parallax]}
+      modules={[Autoplay, Parallax]}
     >
       <SwiperSlide>
         <div slot="container-start" className="parallax-bg" data-swiper-parallax="-70%">
@@ -49,11 +41,10 @@ const HomeHero: FC = () => {
           <Image src={mainImage1} alt="Image" className="picture" />
           <div className="absolute-container">
             <div className="title" data-swiper-parallax="-700">
-              Last year&apos;s achievement!
+              Women in Science
             </div>
             <div className="subtitle" data-swiper-parallax="-200">
-              Celebrate the success of last year&apos;s Science and Engineering Fest with joyous cake-cutting, capturing
-              the spirit of achievement and happiness.
+              Pioneering women redefine science&apos;s future
             </div>
           </div>
         </div>
