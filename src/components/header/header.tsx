@@ -13,6 +13,7 @@ const Header: FC = () => {
   const { breakpoints } = useTheme()
   const matchMobileView = useMediaQuery(breakpoints.down('md'))
   const stateChange = () => {
+    console.log(visibleMenu)
     setVisibleMenu(!visibleMenu)
   }
   return (
@@ -45,10 +46,8 @@ const Header: FC = () => {
               }),
             }}
           >
-            {/* <Box /> */}
-            {/* <div onClick={() => stateChange()}> */}
-            <Navigation />
-            {/* </div> */}
+            <Box />
+            <Navigation stateChange={() => stateChange()} />
             <AuthNavigation />
             {visibleMenu && matchMobileView && (
               <IconButton

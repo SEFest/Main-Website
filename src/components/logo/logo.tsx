@@ -10,7 +10,7 @@ interface Props {
 const Logo: FC<Props> = () => {
   return (
     <Box style={{ cursor: 'pointer' }} sx={{ width: { xs: 200, md: 300 }, height: { md: 60 } }}>
-      <Image src={MainLogo} alt="Logoimage" />
+      <Image src={MainLogo} alt="Logoimage" loading="lazy" />
     </Box>
   )
 }

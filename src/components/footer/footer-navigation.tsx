@@ -75,14 +75,14 @@ const FooterNavigation: FC = () => {
   }
 
   return (
-    <Grid container spacing={5}>
-      <Grid item xs={12} md={7}>
+    <Grid container sx={{ ml: { xs: 0, md: 35 }, mt: { xs: 10, md: 0 } }}>
+      <Grid item xs={12} md={5}>
         <FooterSectionTitle title="Modules" />
         {courseMenu.map(({ label }, index) => (
           <NavigationItem label={label} key={index} />
         ))}
       </Grid>
-      <Grid item xs={12} md={4}>
+      <Grid item xs={12} md={5} sx={{ mt: { xs: 3, md: 0 } }}>
         <FooterSectionTitle title="Contact Us" />
         {companyMenu.map(({ title }, index) => (
           <div key={index} onClick={() => openLinkForPhoneNumber(title)}>

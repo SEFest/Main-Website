@@ -32,6 +32,10 @@ const ModalComponent: React.FC<ModalProps> = ({ open, onClose, selectedItem }) =
   const handleOpenPDF = () => {
     window.open('/Fest-Directives.pdf', '_blank')
   }
+  const applyBoldStyling = (text) => {
+    // Check if text is defined before attempting to replace
+    return text ? text.replace(/"([^"]+)"/g, (match, p1) => `<strong>${p1}</strong>`) : ''
+  }
   return (
     <>
       <Dialog
@@ -43,11 +47,11 @@ const ModalComponent: React.FC<ModalProps> = ({ open, onClose, selectedItem }) =
         onClose={handleClose}
         aria-describedby="alert-dialog-slide-description"
       >
-        <DialogTitle>{selectedItem?.title}</DialogTitle>
+        <DialogTitle sx={{ fontSize: '1.5rem' }}>{selectedItem?.title}</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-slide-description">
+            {/* {applyBoldStyling(selectedItem?.information)} */}
             {selectedItem?.information}
-            {/* Add more properties as needed */}
           </DialogContentText>
         </DialogContent>
         <DialogContent>

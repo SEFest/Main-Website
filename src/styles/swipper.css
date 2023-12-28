@@ -38,3 +38,46 @@
   font-size: 14px;
   line-height: 1.3;
 }
+
+@media only screen and (max-width: 500px) {
+  .absolute-container {
+    position: absolute;
+    width: 12rem;
+    height: 10rem;
+    right: 1rem;
+    height: auto;
+    top: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0.7rem;
+  }
+  .title {
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 1vh;
+  }
+
+  .subtitle {
+    font-size: 0.5rem;
+    font-weight: 300;
+  }
+}
+/* @media screen and (max-width: 768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    --swiper-navigation-size: 10px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    --swiper-navigation-size: 15px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    --swiper-navigation-size: 20px;
+  }
+} */

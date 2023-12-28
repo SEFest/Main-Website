@@ -20,6 +20,7 @@ const MentorCardItem: FC<Props> = ({ item }) => {
       <Box
         sx={{
           p: 2,
+          pb: 4,
           backgroundColor: 'background.paper',
           borderRadius: 4,
           transition: (theme) => theme.transitions.create(['box-shadow']),
@@ -33,17 +34,20 @@ const MentorCardItem: FC<Props> = ({ item }) => {
             lineHeight: 0,
             overflow: 'hidden',
             borderRadius: 3,
-            height: 200,
+            height: 300,
             mb: 2,
           }}
         >
-          <Image src={item.photo as string} width={570} height={427} alt={'Mentor ' + item.id} />
+          <Image src={item.photo as string} width={400} loading="lazy" height={500} alt={'Mentor ' + item.id} />
         </Box>
-        <Box sx={{ mb: 2 }}>
-          <Typography component="h2" variant="h4" sx={{ fontSize: '1.4rem' }}>
+        <Box sx={{ mb: 2, height: 50 }}>
+          <Typography component="h2" variant="h4" sx={{ fontSize: '1.2rem' }}>
             {item.name}
-          </Typography>{' '}
-          <Typography sx={{ mb: 2, color: 'text.secondary' }}>{item.category}</Typography>
+          </Typography>
+          <Typography component="h2" variant="h4" sx={{ fontSize: '1.2rem' }}>
+            {item.secondName}
+          </Typography>
+          <Typography sx={{ mb: 2, color: 'text.secondary', fontSize: '1em' }}>{item.category}</Typography>
         </Box>
       </Box>
     </Box>
