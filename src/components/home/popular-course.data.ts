@@ -22,7 +22,7 @@ export const data: Array<Course> = [
     cover: '/images/courses/christopher-gower-m_HRfLhgABo-unsplash.jpg',
     title: 'Exhibition & Shows Module',
     information:
-      'Embark on an enlightening journey through our ‘Exhibition & Shows Module’, where intricate concepts are translated into visually stunning narratives. This immersive exhibition captures the essence of knowledge, presenting it in a captivating and visually appealing manner for an unforgettable learning experience.',
+      'Embark on an enlightening journey through our Exhibition & Shows Module, where intricate concepts are translated into visually stunning narratives. This immersive exhibition captures the essence of knowledge, presenting it in a captivating and visually appealing manner for an unforgettable learning experience.',
     points: ['Departmental Project Display', 'Mini Zoo', 'Nutrition Camps', 'Science Circus', 'Science Cinema'],
   },
   {
@@ -30,7 +30,7 @@ export const data: Array<Course> = [
     cover: '/images/courses/true-agency-o4UhdLv5jbQ-unsplash.jpg',
     title: 'Fun & Games Module',
     information:
-      'Dive into our ‘Fun & Games Module; , a captivating blend of precision and strategy designed for an immersive and entertaining experience. From challenging puzzles to strategic showdowns, participants navigate a dynamic landscape of engaging activities. With a tempting cash prize for the winners, the stakes are high and the energy is resonant.',
+      'Dive into our Fun & Games Module , a captivating blend of precision and strategy designed for an immersive and entertaining experience. From challenging puzzles to strategic showdowns, participants navigate a dynamic landscape of engaging activities. With a tempting cash prize for the winners, the stakes are high and the energy is resonant.',
     points: ['Human Ludo', 'Jenga Jam', 'Brain Games', 'Rubiks Rubble', 'Paper Plane'],
   },
 ]
