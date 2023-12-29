@@ -17,7 +17,7 @@ const Header: FC = () => {
     setVisibleMenu(!visibleMenu)
   }
   return (
-    <Box sx={{ backgroundColor: 'background.paper', position: 'absolute', zIndex: 11, width: '100%' }}>
+    <Box sx={{ backgroundColor: 'background.paper', position: 'fixed', zIndex: 11, width: '100%' }}>
       <Container sx={{ py: { xs: 1, md: 3 } }}>
         <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <Logo />

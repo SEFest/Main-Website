@@ -8,8 +8,9 @@ import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import mainImage from '../../../public/images/mainimg-min.png'
 import mainImage1 from '../../../public/images/carouselimg-min.jpg'
-import mainImage2 from '../../../public/images/image-min.png'
+import mainImage2 from '../../../public/images/ludo.jpg'
 import mainImage3 from '../../../public/images/carouselImage-min.png'
+import mainImage4 from '../../../public/images/race.jpg'
 const HomeHero: FC = () => {
   return (
     <Swiper
@@ -57,8 +58,7 @@ const HomeHero: FC = () => {
               Game On – Fun Remembered!
             </div>
             <div className="subtitle" data-swiper-parallax="-200">
-              Jam, Brain Games, Human Ludo, Rubik’s Rumble, and Paper Plane challenges from last year’s fest – where the
-              thrill of fun and games lingered in every moment!
+              olling the dice of camaraderie, strategy and laughter in the educational journey.
             </div>
           </div>
         </div>
@@ -72,6 +72,19 @@ const HomeHero: FC = () => {
             </div>
             <div className="subtitle" data-swiper-parallax="-200">
               Relive the excitement of Science Cinema, Science Circus, and the Mini Zoo – unforgettable exhibitions.
+            </div>
+          </div>
+        </div>
+      </SwiperSlide>
+      <SwiperSlide>
+        <div slot="container-start" className="parallax-bg" data-swiper-parallax="-70%">
+          <Image src={mainImage4} alt="Image" className="picture" loading="lazy" />
+          <div className="absolute-container">
+            <div className="title" data-swiper-parallax="-700">
+              Exhibit Extravaganza
+            </div>
+            <div className="subtitle" data-swiper-parallax="-200">
+              Education in progress: where classrooms transform into gaming arenas.
             </div>
           </div>
         </div>

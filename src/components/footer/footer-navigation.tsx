@@ -11,19 +11,19 @@ interface Data {
 }
 const courseMenu: Array<Navigation> = [
   {
-    label: 'Competitive Module',
+    label: 'Competitive ',
     path: 'popular-course',
   },
   {
-    label: 'Workshop Module',
+    label: 'Workshop ',
     path: 'popular-course',
   },
   {
-    label: 'Exhibition & Shows Module',
+    label: 'Exhibition & Shows ',
     path: 'popular-course',
   },
   {
-    label: 'Fun & Games Module',
+    label: 'Fun & Games ',
     path: 'popular-course',
   },
 ]
