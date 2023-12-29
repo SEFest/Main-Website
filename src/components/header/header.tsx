@@ -17,9 +17,9 @@ const Header: FC = () => {
     setVisibleMenu(!visibleMenu)
   }
   return (
-    <Box sx={{ backgroundColor: 'background.paper' }}>
-      <Container sx={{ py: { xs: 2, md: 3 } }}>
-        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+    <Box sx={{ backgroundColor: 'background.paper', position: 'absolute', zIndex: 11, width: '100%' }}>
+      <Container sx={{ py: { xs: 1, md: 3 } }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <Logo />
           <Box sx={{ ml: 'auto', display: { xs: 'inline-flex', md: 'none' } }}>
             <IconButton onClick={() => stateChange()}>
@@ -40,7 +40,9 @@ const Header: FC = () => {
                 backgroundColor: 'background.paper',
                 zIndex: 'appBar',
                 position: 'fixed',
-                height: { xs: '60vh', md: 'auto' },
+                // width: '50%',
+
+                height: { xs: '50vh', md: 'auto' },
                 top: visibleMenu ? 0 : '-120vh',
                 left: 0,
               }),
