@@ -38,7 +38,7 @@ const MentorCardItem: FC<Props> = ({ item }) => {
             mb: 2,
           }}
         >
-          <Image src={item.photo as string} width={400} height={400} alt={'Mentor ' + item.id} />
+          <Image priority src={item.photo as string} width={400} height={400} alt={'Mentor ' + item.id} />
         </Box>
         <Box sx={{ mb: 2, height: 50 }}>
           <Typography component="h2" variant="h4" sx={{ fontSize: '1.2rem' }}>

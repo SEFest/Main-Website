@@ -80,7 +80,7 @@ const HomeHero: FC = () => {
       {slides.map((slide, index) => (
         <SwiperSlide key={index}>
           <div slot="container-start" className="parallax-bg" data-swiper-parallax="-70%">
-            <Image src={slide.mainImage} alt="Image" className="picture" loading="lazy" />
+            <Image src={slide.mainImage} alt="Image" priority className="picture" loading="lazy" />
             {!isMobile && (
               <div className="absolute-container">
                 <div className="title" data-swiper-parallax="-700">
@@ -94,72 +94,6 @@ const HomeHero: FC = () => {
           </div>
         </SwiperSlide>
       ))}
-      {/* <SwiperSlide>
-        <div slot="container-start" className="parallax-bg" data-swiper-parallax="-70%">
-          <Image src={mainImage} alt="Image" className="picture" loading="lazy" />
-          <div className="absolute-container">
-            <div className="title" data-swiper-parallax="-700">
-              Flashback to Festive Cheers!
-            </div>
-            <div className="subtitle" data-swiper-parallax="-200">
-              Relive the joyous moments from last year&apos;s celebration at Science and Engineering Fest 2023 – where
-              laughter and merriment filled the air!
-            </div>
-          </div>
-        </div>
-      </SwiperSlide>
-      <SwiperSlide>
-        <div slot="container-start" className="parallax-bg" data-swiper-parallax="-70%">
-          <Image src={mainImage1} alt="Image" className="picture" loading="lazy" />
-          <div className="absolute-container">
-            <div className="title" data-swiper-parallax="-700">
-              Women in Science
-            </div>
-            <div className="subtitle" data-swiper-parallax="-200">
-              Pioneering women redefine science&apos;s future
-            </div>
-          </div>
-        </div>
-      </SwiperSlide>
-      <SwiperSlide>
-        <div slot="container-start" className="parallax-bg" data-swiper-parallax="-70%">
-          <Image src={mainImage2} alt="Image" className="picture" loading="lazy" />
-          <div className="absolute-container">
-            <div className="title" data-swiper-parallax="-700">
-              Game On – Fun Remembered!
-            </div>
-            <div className="subtitle" data-swiper-parallax="-200">
-              olling the dice of camaraderie, strategy and laughter in the educational journey.
-            </div>
-          </div>
-        </div>
-      </SwiperSlide>
-      <SwiperSlide>
-        <div slot="container-start" className="parallax-bg" data-swiper-parallax="-70%">
-          <Image src={mainImage3} alt="Image" className="picture" loading="lazy" />
-          <div className="absolute-container">
-            <div className="title" data-swiper-parallax="-700">
-              Exhibit Extravaganza
-            </div>
-            <div className="subtitle" data-swiper-parallax="-200">
-              Relive the excitement of Science Cinema, Science Circus, and the Mini Zoo – unforgettable exhibitions.
-            </div>
-          </div>
-        </div>
-      </SwiperSlide>
-      <SwiperSlide>
-        <div slot="container-start" className="parallax-bg" data-swiper-parallax="-70%">
-          <Image src={mainImage4} alt="Image" className="picture" loading="lazy" />
-          <div className="absolute-container">
-            <div className="title" data-swiper-parallax="-700">
-              Exhibit Extravaganza
-            </div>
-            <div className="subtitle" data-swiper-parallax="-200">
-              Education in progress: where classrooms transform into gaming arenas.
-            </div>
-          </div>
-        </div>
-      </SwiperSlide> */}
     </Swiper>
   )
 }
