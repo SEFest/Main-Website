@@ -8,9 +8,9 @@ import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import mainImage from '../../../public/images/mainimg-min.png'
 import mainImage1 from '../../../public/images/carouselimg-min.jpg'
-import mainImage2 from '../../../public/images/ludo.jpg'
+import mainImage2 from '../../../public/images/ludo.png'
 import mainImage3 from '../../../public/images/carouselImage-min.png'
-import mainImage4 from '../../../public/images/race.jpg'
+import mainImage4 from '../../../public/images/race.png'
 const HomeHero: FC = () => {
   interface Slide {
     mainImage: StaticImageData
