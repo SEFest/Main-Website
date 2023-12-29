@@ -56,7 +56,7 @@ const HomeFeature: FC = () => {
             <Grid item xs={12} md={6} sx={{ display: { xs: 'block', md: 'block' } }}>
               <Box sx={{ width: { xs: '100%', md: '90%' } }}>
                 <Image
-                  src="/images/aboutImage.jpg"
+                  src="/images/aboutImage-min.jpg"
                   priority
                   alt="Testimonial img"
                   width={1000}
