@@ -31,10 +31,7 @@ const ModalComponent: React.FC<ModalProps> = ({ open, onClose, selectedItem }) =
   const handleOpenPDF = () => {
     window.open('/Fest-Directives.pdf', '_blank')
   }
-  const applyBoldStyling = (text) => {
-    // Check if text is defined before attempting to replace
-    return text ? text.replace(/"([^"]+)"/g, (match, p1) => `<strong>${p1}</strong>`) : ''
-  }
+
   return (
     <>
       <Dialog
