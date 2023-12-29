@@ -2,8 +2,8 @@ import React, { useContext, useEffect } from 'react'
 // import './countdown.css'
 import { useCountdown } from '../hooks/useCountdown.js'
 import { LaunchContext } from '../context/LaunchTime'
-import { Box, Container, Grid, Typography } from '@mui/material'
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+import { Box, Button, Container, Grid, Typography } from '@mui/material'
+
 const DateTimeDisplay = ({ value, type, isDanger }) => {
   return (
     <div className={isDanger ? 'countdown danger' : 'countdown'}>
@@ -12,7 +12,6 @@ const DateTimeDisplay = ({ value, type, isDanger }) => {
     </div>
   )
 }
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 const ExpiredNotice = () => {
   return (
     <div>
@@ -32,7 +31,6 @@ const ExpiredNotice = () => {
     </div>
   )
 }
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 const ShowCounter = ({ days, hours, minutes, seconds }) => {
   return (
     <div className="show-counter">
@@ -48,7 +46,7 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
     </div>
   )
 }
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+
 const CountdownTimer = ({ targetDate }) => {
   const [days, hours, minutes, seconds] = useCountdown('1/24/2024')
   // const launcContext = useContext(LaunchContext)
@@ -87,29 +85,87 @@ const CountdownTimer = ({ targetDate }) => {
     )
   } else {
     return (
-      <Grid item xs={12} md={5}>
-        <Box
+      <Box
+        sx={{
+          pt: {
+            xs: 6,
+            md: 8,
+          },
+          pb: 14,
+          backgroundColor: 'background.default',
+        }}
+      >
+        <Container maxWidth="lg">
+          <Grid container spacing={2}>
+            <Grid item xs={12} md={3}>
+              <Box
+                sx={{
+                  height: '100%',
+                  width: { xs: '100%', md: '90%' },
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: { xs: 'center', md: 'flex-start' },
+                }}
+              >
+                <Typography variant="h1" sx={{ mt: { xs: 0, md: -5 }, fontSize: { xs: 30, md: 40 } }}>
+                  Join Our Event
+                </Typography>
+              </Box>
+            </Grid>
+
+            <Grid item xs={12} md={9}>
+              <Box
+                sx={{
+                  backgroundColor: 'secondary.main',
+                  borderRadius: 2,
+                  marginX: { xs: '6vw', md: '8vw' },
+                  paddingY: { xs: '0vh', md: '2vh' },
+                }}
+              >
+                <ShowCounter days={days} hours={hours} minutes={minutes} seconds={seconds} />
+              </Box>
+            </Grid>
+          </Grid>
+        </Container>
+        <Grid
+          item
+          xs={12}
+          md={3}
           sx={{
-            marginTop: '1rem',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            marginTop: '5rem ',
+            marginBottom: '-6rem',
           }}
         >
-          <Typography variant="h1" sx={{ ml: '20vw', fontSize: { xs: 30, md: 48 } }}>
-            Join this event
-          </Typography>
-        </Box>
-        <Box
-          sx={{
-            backgroundColor: 'secondary.main',
-            borderRadius: 5,
-            // marginX: { xs: '20vw', lg: '25vw', md: '12vw' },
-            marginX: '25vw',
-            paddingY: '2vh',
-            marginTop: '2rem',
-          }}
-        >
-          <ShowCounter days={days} hours={hours} minutes={minutes} seconds={seconds} />
-        </Box>
-      </Grid>
+          <Box>
+            <Button
+              variant="contained"
+              onClick={() => {
+                window.open(
+                  'https://docs.google.com/forms/d/e/1FAIpQLSe5vxRYzNb_rN9fWFXzsHkEbWBOIbHAlxDbPg2zOTlBrpCtJA/viewform?pli=1',
+                  '_blank'
+                )
+              }}
+              sx={{
+                backgroundColor: 'primary.main',
+                transition: 'background-color 0.5s ease-in-out',
+                paddingY: { xs: '1rem', md: '2rem' },
+                paddingX: { xs: '2.5rem', md: '5rem' },
+                fontSize: { xs: '1rem', md: '1.5rem' },
+                '&:hover': {
+                  backgroundColor: 'secondary.main',
+                  color: 'primary.main',
+                },
+              }}
+            >
+              Register Now
+            </Button>
+          </Box>
+        </Grid>
+      </Box>
     )
   }
 }
