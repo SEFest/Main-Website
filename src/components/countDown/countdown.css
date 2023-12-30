@@ -77,6 +77,20 @@
     /* flex-direction: column; */
   }
   .show-counter .countdown {
-    width: 7rem;
+    width: 10rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .show-counter .countdown > span {
+    font-size: 0.7rem;
+  }
+
+  .show-counter .countdown-link {
+    font-size: 1.2rem;
+    /* flex-direction: column; */
+  }
+  .show-counter .countdown {
+    width: 10rem;
   }
 }

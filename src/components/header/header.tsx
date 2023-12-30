@@ -40,9 +40,7 @@ const Header: FC = () => {
                 backgroundColor: 'background.paper',
                 zIndex: 'appBar',
                 position: 'fixed',
-                // width: '50%',
-
-                height: { xs: '50vh', md: 'auto' },
+                height: { xs: '30rem', md: 'auto' },
                 top: visibleMenu ? 0 : '-120vh',
                 left: 0,
               }),

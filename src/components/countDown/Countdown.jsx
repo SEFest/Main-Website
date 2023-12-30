@@ -118,7 +118,7 @@ const CountdownTimer = ({ targetDate }) => {
                 sx={{
                   backgroundColor: 'secondary.main',
                   borderRadius: 2,
-                  marginX: { xs: '6vw', md: '8vw' },
+                  marginX: { xs: '0rem', sm: '10rem', md: '10rem' },
                   paddingY: { xs: '0vh', md: '2vh' },
                 }}
               >

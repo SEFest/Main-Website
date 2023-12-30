@@ -80,7 +80,7 @@ const HomeHero: FC = () => {
       {slides.map((slide, index) => (
         <SwiperSlide key={index}>
           <div slot="container-start" className="parallax-bg" data-swiper-parallax="-70%">
-            <Image src={slide.mainImage} alt="Image" priority className="picture" loading="lazy" />
+            <Image src={slide.mainImage} alt="Image" priority className="picture" />
             {!isMobile && (
               <div className="absolute-container">
                 <div className="title" data-swiper-parallax="-700">
