@@ -142,7 +142,7 @@ const HomeFeature: FC = () => {
                 Discover the exciting worlds of science and engineering within our unique departments. From exploring
                 the wonders of nature to crafting cutting-edge technologies, each department is a hub of creativity and
                 innovation. Join us on this journey of discovery and advancement as we push the boundaries of
-                knowledge together
+                knowledge together.
               </Typography>
 
               <Grid container spacing={2} sx={{ ml: { xs: 0, md: 2 } }}>

@@ -49,40 +49,9 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
 
 const CountdownTimer = ({ targetDate }) => {
   const [days, hours, minutes, seconds] = useCountdown('1/24/2024')
-  // const launcContext = useContext(LaunchContext)
-
-  // const { showRegister, setShowRegister } = launcContext
-
-  useEffect(() => {
-    // if (days + hours + minutes + seconds <= 0) {
-    //   setShowRegister(true)
-    // }
-  }, [])
 
   if (days + hours + minutes + seconds <= 0) {
-    return (
-      <Box sx={{}}>
-        <Typography
-          component="span"
-          sx={{
-            fontSize: 'inherit',
-            color: '#bf0b6d',
-            fontWeight: 'inherit',
-            position: 'relative',
-            '& svg': {
-              position: 'absolute',
-              top: -16,
-              right: -21,
-              width: { xs: 22, md: 30 },
-              height: 'auto',
-            },
-          }}
-        >
-          Join this event
-        </Typography>
-        <ExpiredNotice />
-      </Box>
-    )
+    return <Box sx={{}}></Box>
   } else {
     return (
       <Box

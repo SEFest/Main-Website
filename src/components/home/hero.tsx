@@ -43,8 +43,8 @@ const HomeHero: FC = () => {
     },
     {
       mainImage: mainImage4,
-      title: 'Exhibit Extravaganza',
-      subtitle: 'Education in progress: where classrooms transform into gaming arenas.',
+      title: 'Learning Reloaded',
+      subtitle: 'Where classrooms transform into gaming arenas.',
     },
   ]
   const [isMobile, setIsMobile] = useState(true)

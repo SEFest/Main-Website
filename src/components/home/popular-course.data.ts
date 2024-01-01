@@ -29,6 +29,6 @@ export const data: Array<Course> = [
     cover: '/images/courses/image3.jpg',
     title: 'Fun & Games ',
     information: 'Where precision and strategy come together for an engaging and entertaining experience.',
-    points: ['Human Ludo', 'Jenga Jam', 'Brain Games', 'Rubiks Rubble', 'Paper Plane'],
+    points: ['Human Ludo', 'Jenga Jam', 'Brain Games', "Rubik's Rubble", 'Paper Plane'],
   },
 ]

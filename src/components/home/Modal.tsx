@@ -61,7 +61,7 @@ const ModalComponent: React.FC<ModalProps> = ({ open, onClose, selectedItem }) =
         </DialogContent>
         <DialogContent>
           <DialogContentText id="alert-dialog-slide-description">
-            For further information please consult our rule book.
+            For further information please consult our directives.
           </DialogContentText>
         </DialogContent>
         <DialogActions>
