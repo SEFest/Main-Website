@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { Component, FC, useEffect, useState } from 'react'
 import Head from 'next/head'
 import type { AppProps } from 'next/app'
 import { CssBaseline } from '@mui/material'
@@ -12,6 +12,7 @@ import '@/styles/react-slick.css'
 import { NextPageWithLayout } from '@/interfaces/layout'
 import '../components/countDown/countdown.css'
 import '../styles/swipper.css'
+import SplashScreen from '@/components/SplashScreen/SplashScreen'
 // import 'slick-carousel/slick/slick-theme.css'
 
 // Client-side cache, shared for the whole session of the user in the browser.
@@ -23,12 +24,24 @@ type AppPropsWithLayout = AppProps & {
 }
 
 const App: FC<AppPropsWithLayout> = (props: AppPropsWithLayout) => {
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    const splashScreenTimeout = setTimeout(() => {
+      setIsLoading(false)
+    }, 3000)
+
+    return () => {
+      clearTimeout(splashScreenTimeout)
+    }
+  }, [])
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props
 
   // Use the layout defined at the page level, if available
   const getLayout = Component.getLayout || ((page) => page)
 
   return (
+    //
     <CacheProvider value={emotionCache}>
       <Head>
         {/* <meta name="viewport" content="initial-scale=1, width=device-width" /> */}
@@ -37,7 +50,7 @@ const App: FC<AppPropsWithLayout> = (props: AppPropsWithLayout) => {
       <MUIProvider>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
-        {getLayout(<Component {...pageProps} />)}
+        {isLoading ? <SplashScreen /> : getLayout(<Component {...pageProps} />)}
       </MUIProvider>
     </CacheProvider>
   )
