@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { Typography } from '@mui/material'
 
 const SplashScreen: React.FC = () => {
   // const [isVisible, setIsVisible] = useState(true)
@@ -51,7 +52,7 @@ const SplashScreen: React.FC = () => {
         //   exit="exit"
       >
         <Image src="/images/festLogo.png" alt="Splash Screen" width={350} height={300} />
-        <h1>Science & Engineering Festival</h1>
+        <Typography sx={{ fontSize: { xs: 25, md: 45 } }}>Science & Engineering Festival</Typography>
       </motion.div>
     </div>
   )
