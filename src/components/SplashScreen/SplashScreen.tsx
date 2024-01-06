@@ -4,16 +4,6 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 
 const SplashScreen: React.FC = () => {
-  const fadeInOutAnimation = {
-    initial: { opacity: 0 },
-    animate: { opacity: 1 },
-    exit: { opacity: 0 },
-  }
-  const rotateInAnimation = {
-    initial: { opacity: 0, x: '-100%', rotate: -90 },
-    animate: { opacity: 1, x: '0%', rotate: 0 },
-    exit: { opacity: 0, x: '100%', rotate: 90 },
-  }
   return (
     <div
       style={{
