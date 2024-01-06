@@ -50,16 +50,16 @@ const App: FC<AppPropsWithLayout> = (props: AppPropsWithLayout) => {
       <MUIProvider>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
-        <Suspense fallback={<SplashScreen />}>
-          {isLoading ? (
-            <SplashScreen />
-          ) : (
-            <Suspense fallback={<SplashScreen />}>
-              {' '}
-              <Component {...pageProps} />{' '}
-            </Suspense>
-          )}
-        </Suspense>
+        {/* <Suspense fallback={<SplashScreen />}> */}
+        {isLoading ? (
+          <SplashScreen />
+        ) : (
+          // <Suspense fallback={<SplashScreen />}>
+
+          <Component {...pageProps} />
+          // </Suspense>
+        )}
+        {/* </Suspense> */}
       </MUIProvider>
     </CacheProvider>
   )
