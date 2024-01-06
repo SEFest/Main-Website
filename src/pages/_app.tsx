@@ -1,4 +1,4 @@
-import React, { Component, FC, useEffect, useState } from 'react'
+import React, { Component, FC, Suspense, useEffect, useState } from 'react'
 import Head from 'next/head'
 import type { AppProps } from 'next/app'
 import { CssBaseline } from '@mui/material'
@@ -25,6 +25,16 @@ type AppPropsWithLayout = AppProps & {
 const App: FC<AppPropsWithLayout> = (props: AppPropsWithLayout) => {
   const [isLoading, setIsLoading] = useState(true)
 
+  useEffect(() => {
+    // Show splash screen for 3 seconds
+    const splashScreenTimeout = setTimeout(() => {
+      setIsLoading(false)
+    }, 3000)
+
+    return () => {
+      clearTimeout(splashScreenTimeout)
+    }
+  }, [])
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props
 
   // Use the layout defined at the page level, if available
@@ -40,7 +50,16 @@ const App: FC<AppPropsWithLayout> = (props: AppPropsWithLayout) => {
       <MUIProvider>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
-        {getLayout(<Component {...pageProps} />)}
+        <Suspense fallback={<SplashScreen />}>
+          {isLoading ? (
+            <SplashScreen />
+          ) : (
+            <Suspense fallback={<SplashScreen />}>
+              {' '}
+              <Component {...pageProps} />{' '}
+            </Suspense>
+          )}
+        </Suspense>
       </MUIProvider>
     </CacheProvider>
   )

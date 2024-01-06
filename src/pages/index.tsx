@@ -1,25 +1,23 @@
-import React, { lazy, Suspense, useState, useEffect } from 'react'
+import React, { useState, useEffect, Suspense } from 'react'
+import dynamic from 'next/dynamic'
 import { NextPageWithLayout } from '@/interfaces/layout'
-import { MainLayout } from '@/components/layout'
 import { motion } from 'framer-motion'
+import SplashScreen from '@/components/SplashScreen/SplashScreen'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
-import SplashScreen from '@/components/SplashScreen/SplashScreen'
 
-const DynamicHomeHero = lazy(() => import('../components/home/hero'))
-const DynamicHomeFeature = lazy(() => import('../components/home/feature'))
-const DynamicHomePopularCourse = lazy(() => import('../components/home/popular-courses'))
-const DynamicHomeTestimonial = lazy(() => import('../components/home/testimonial'))
-const DynamicHomeOurMentors = lazy(() => import('../components/home/mentors'))
-const CountDown = lazy(() => import('../components/countDown/Countdown'))
+const DynamicHomeHero = dynamic(() => import('../components/home/hero'))
+const DynamicHomeFeature = dynamic(() => import('../components/home/feature'))
+const DynamicHomePopularCourse = dynamic(() => import('../components/home/popular-courses'))
+const DynamicHomeTestimonial = dynamic(() => import('../components/home/testimonial'))
+const DynamicHomeOurMentors = dynamic(() => import('../components/home/mentors'))
+const CountDown = dynamic(() => import('../components/countDown/Countdown'), { ssr: false })
 
 const Home: NextPageWithLayout = () => {
   const [componentsLoaded, setComponentsLoaded] = useState(false)
 
   useEffect(() => {
-    // Simulate a delay for loading each component
     const loadComponents = async () => {
-      await new Promise((resolve) => setTimeout(resolve, 1000))
       await Promise.all([
         DynamicHomeHero,
         DynamicHomeFeature,
@@ -31,7 +29,9 @@ const Home: NextPageWithLayout = () => {
       setComponentsLoaded(true)
     }
 
-    loadComponents()
+    setTimeout(async () => {
+      await loadComponents()
+    }, 200)
   }, [])
 
   return (
@@ -48,5 +48,7 @@ const Home: NextPageWithLayout = () => {
     </Suspense>
   )
 }
+
+// Home.getLayout = (page) => <>{page}</>
 
 export default Home

@@ -1,10 +1,21 @@
 // components/SplashScreen.tsx
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 
 const SplashScreen: React.FC = () => {
-  return (
+  const [isVisible, setIsVisible] = useState(true)
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsVisible(false)
+    }, 3000)
+
+    return () => {
+      clearTimeout(timeout)
+    }
+  }, [])
+  return isVisible ? (
     <div
       style={{
         position: 'fixed',
@@ -43,7 +54,7 @@ const SplashScreen: React.FC = () => {
         <h1>Science & Engineering Festival</h1>
       </motion.div>
     </div>
-  )
+  ) : null
 }
 
 export default SplashScreen
